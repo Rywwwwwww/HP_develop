@@ -1,0 +1,339 @@
+<!-- HP ホーム画面表示 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+  <!-- cssファイルリンク -->
+  <link rel="stylesheet" href="home.css">
+  
+  <!-- ページタイトル -->
+  <title>農事組合法人 M.F.C</title>
+</head>
+
+<body>
+  <header>
+    <div class="slide pc">
+      <img src="picture/TEST_1.png" alt="">
+      <img src="picture/TEST_0.png" alt="">
+      <img src="picture/TEST_3.png" alt="">
+      <img src="picture/TEST_4.png" alt="">
+      <img src="picture/TEST_5.png" alt="">
+      <img src="picture/TEST_6.png" alt="">
+    </div>
+    <div class="slide sp">
+      <!--
+      <img src="img/top_sp1.png" alt="">
+      <img src="img/top_sp2.png" alt="">
+      <img src="img/top_sp3.png" alt="">
+      <img src="img/top_sp4.png" alt="">
+      <img src="img/top_sp5.jpg" alt="">
+      <img src="img/top_sp6.png" alt="">
+      -->
+    </div>
+
+    <div class="top-text">
+      <!-- 会社名 -->
+      <h2>M.F.C.</h2>
+      <p>むつあい　フラワー　コネクション</p>
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="top">
+      <div class="inner">
+        <h1 class="logo">
+		      <!--<a href="index.html"><img src="img/logo.png" alt="hoshikake_aquarium"></a>-->
+        </h1>
+        <ul>
+	        <!-- Twitter -->
+          <li><a  href="https://twitter.com/hogehoge"><i class="lab la-twitter"></i></a><li>
+          
+          <!-- インスタ -->
+          <li><a class="instagram" href="#"><img src="img/Instagram_Glyph_Gradient_RGB.png" alt="instagram"></a></li>
+        </ul>
+      </div>
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span><i class="las la-water"></i><i class="las la-times"></i></span></label>
+
+	<!--ここからメニュー-->
+	<!--
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a href="#pick_up">ホーム</a>
+            </li>
+            <li>
+              <a href="#facility_map">館内マップ</a>
+            </li>
+            <li>
+              <a href="#opening_hours">営業時間</a>
+            </li>
+            <li>
+              <a href="#fee">入館料</a>
+            </li>
+            <li>
+              <a href="#news">ニュース</a>
+            </li>
+            <li>
+              <a href="#access">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+	-->
+
+        <!--ここまでメニュー-->
+      </div>
+    </div>
+    <!--<img class="mask" src="img/mask.png">-->
+    <div class="nav wrappe">
+      <nav>
+        <ul>
+	        <!-- カテゴリー欄 -->
+          <li><i><img src="picture/home.png"></i><br><span><h3>ホーム</h3></span></li>
+          <li><i><img src="picture/concept.png"></i><br><span><h3>コンセプト</h3></span></li>
+          <li><i><img src="picture/flower.png"></i><br><span><h3>商品紹介</h3></span></li>
+	        <li><i><img src="picture/info.png"></i><br><span><h3>お問い合わせ</h3></span></li>
+        </ul>
+      </nav>
+      <div class="arrow"></div>
+    </div>
+
+    <section id="pick_up" class="wrapper">
+      
+      <!-- ホーム画面 -->
+      <h2 class="section-title">ホーム画面　企業アピールなど</h2>
+      <div class="pickup_main fade-block" >
+        <img src="img/main.png" alt="見どころ1">
+        <img class="star1" src="img/star_1.png" alt="">
+        <h3 class="title">全国でも珍しい<span> 昼 </span>と<span> 夜 </span>の<br class="ib">２部制の水族館です！
+        </h3>
+        <p class="main_txt">昼間のデイツアーは大水槽を優雅に泳ぐ姿や、イルカショー、癒しのクラゲドームを、
+          <br>夕方からのナイトツアーでは、ランタンを片手に、魚たちの夜の生態や、
+          <br>飼育員たちのお世話の様子など、水族館の裏側をご覧いただけます！
+        </p>
+      </div>
+      <div class="pattern">
+        <img class="bubble1" src="img/bubble1.png" alt="">
+        <img class="bubble2" src="img/bubble2.png" alt="">
+        <img class="bubble3" src="img/bubble2.png" alt="">
+        <img class="bubble4" src="img/bubble1.png" alt="">
+        <img class="bubble5" src="img/bubble2.png" alt="">
+      </div>
+
+      <div class="pickup_dolphin fade-block">
+        <div class="pickup_dolphin_pic">
+          <img class="dolphin_pic" src="img/dolphin.png" alt="見どころ2">
+          <img  class="star2" src="img/star_2.png" alt="">
+        </div>
+        <div>
+          <h3 class="title"> デイツアーの目玉 <br class="ib3">イルカショー！</h3>
+          <p class="pickup_dolphin_txt">人懐っこくて、運動神経抜群！
+            <br>３頭のバンドウイルカ、ベガ・シータ・カーフの
+            <br>迫力満点のショーをご覧ください！
+            <br>濡れてもOKな方は、1列目の席で
+            <br>イルカたちを間近に感じてください!
+          </p>
+          <div class="pop">
+            <p>＼  1日<span>3</span>回開催! ／</p>
+            <h3 class="pop_title">イルカショー</h3>
+            <p>11時、13時、15時 (各回20分)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pickup_jellyfish fade-block">
+        <div class="pickup_jellyfish_pic">
+          <img src="img/jellyfish.png" alt="見どころ3">
+          <img  class="star3" src="img/star_3.png" alt="">
+          <img  class="glitter1" src="img/glitter1.png" alt="">
+          <img  class="glitter2" src="img/glitter2.png" alt="">
+        </div>
+        <div>
+          <h3 class="title"> 時を忘れる <br class="ib3">癒しのクラゲドーム</h3>
+          <p class="pickup_jellyfish_txt">360度どこを見ても、クラゲたちが漂うドーム水槽は
+            <br>大人にも子どもにも大人気の空間です！
+            <br>頭を空っぽにして、ずーっと眺めていると
+            <br>まるで無重力になったかのような錯覚に陥りますよ！
+            <br>
+            <br>カラフルにライトアップされたクラゲたちは
+            <br>とても神秘的で、写真映えもGOOD！
+            <br>ぜひ20種類以上の美しいクラゲたちの中から
+            <br>お気に入りのクラゲを見つけてくださいね。
+          </p>
+        </div>
+      </div>
+      <div class="others fade-block">
+        <h3 class="others_title">その他<br class="ib"> 星駆水族館の仲間たち！</h3>
+        <ul>
+          <li><img src="img/white-dolphin.png"><br>白イルカ</li>
+          <li><img src="img/sardine.png"><br>イワシ</li>
+          <li><img src="img/turtle.png"><br>アオ<br class="ib">ウミガメ</li>
+          <li><img src="img/clownfish.png"><br>カクレ<br class="ib">クマノミ</li>
+          <li><img src="img/coral.png"><br>珊瑚</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--
+    <section id="facility_map" class="wrapper">
+      <h2 class="section-title">館内マップ</h2>
+      <p class="facility_map_txt">エントランスでチケットを切ったら、
+        <br>スロープを下って大水槽を眺めながら潜降するもよし、<br class="ib">イルカたちに会いに直行するもよし！
+        <br>当館に順路はありませんので、ご自由にお楽しみください。
+      </p>
+      <div class="facility_map">
+        <img class="fade-block" src="img/map_1F.png" alt="1F">
+        <img  class="fade-block" src="img/map_b1F.png" alt="B1F">
+      </div>
+    </section>
+    -->
+
+    <!--
+    <section id="info">
+      <div id="opening_hours" class="wrapper">
+        <h2 class="section-title">営業時間</h2>
+        <p>(火曜日休館)</p>
+        <div class="list fade-block">
+          <dl class="day_tour">
+            <dt><i class="las la-sun"></i>デイツアー</dt>
+            <dd>10時 〜 17時<dd>
+            <small>(最終入場16時30分)</small>
+          </dl>
+          <dl class="night_tour">
+            <dt><img src="" alt=""><i class="las la-moon"></i>ナイトツアー</dt>
+            <dd><span class="month">4〜10月</span><br class="ib2">19時30分 〜 21時</dd>
+            <dd><span class="month">11〜3月</span><br class="ib2">18時30分 〜 20時</dd>
+          </dl>
+        </div>
+      </div>
+      <div id="fee" class="wrapper">
+        <h2 class="section-title">入館料</h2>
+        <p><span class="slash">＼</span><span class="slash2">＼</span> 夏休み期間限定！<span class="slash2"> ／</span><br class="ib">7月1日〜8月31日まで<span class="slash">、</span><br class="ib2">小学生はナイトツアー半額！ <span class="slash">／</span></p>
+        <p><span class="yen1000">1000円</span> → <span class="yen500">500円</span>!!</p>
+        <div class="list fade-block">
+          <dl class="day_tour">
+            <dt><i class="las la-sun"></i>デイツアー</dt>
+            <dd><span class="child">小学生以下</span>1200円<small class="tax">（税込）</small></dd>
+            <dd><span class="adult">大人</span>2400円<small class="tax">（税込）</small></dd>
+          </dl>
+          <dl class="night_tour">
+            <dt><img src="" alt=""><i class="las la-moon"></i>ナイトツアー</dt>
+            <dd><span class="child">小学生以下</span>1000円<small class="tax">（税込）</small></dd>
+            <dd><span class="adult">大人</span>2000円<small class="tax">（税込）</small></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!--
+    <section id="free_pass">
+      <div class="free_pass wrapper">
+        <h3>＼ <span>２</span>回分の入場料で ／</h3>
+        <h2>年間フリーパス!!</h2>
+        <p>窓口でお買い求めください！</p>
+        <p class="circle"></p>
+      </div>
+    </section>
+    -->
+
+    <!-- ニュース
+    <section id="news" class="wrapper">
+      <h2 class="section-title">ニュース</h2>
+      <ul class="article  fade-block">
+        <li>
+          <time>2021.6.12</time>
+          <p>【夏休み期間限定！】7月1日〜8月31日まで小学生はナイトツアー半額！
+            <br>ナイトツアーにはお子さまだけの入場は不可となりますので、保護者さまとご一緒にお越しください。</p>
+          <img src="img/article1.jpg" alt="">
+        </li>
+        <li>
+          <time>2021.4.29</time>
+          <p>新型コロナウイルス感染症対策について
+            <br>当水族館では、入館時の検温や施設各所に消毒用アルコールを設置し、感染予防を行なっております。また、入場者数の制限をさせていただく可能性もございますので、ご理解とご協力のほど、よろしくお願いいたします。</p>
+          <img src="img/article2.jpg" alt="">
+        </li>
+        <li>
+          <time>2021.4.20</time>
+          <p>【特別展示】学ぼう！ミズクラゲの繁殖！
+            <br>大人気！ミズクラゲの繁殖を学べる展示が始まりました！赤ちゃんミズクラゲたちの成長の過程を、ぜひ観に来てくださいね。</p>
+          <img src="img/article3.jpg" alt="">
+        </li>
+      </ul>
+    </section>
+    -->
+
+    <!-- アクセス
+    <section id="access" class="wrapper">
+      <h2 class="section-title">アクセス</h2>
+      <div class="ggmap1 fade-block"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8173.68060123162!2d136.1834341109156!3d36.24917309082605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8e542fc3ae44f%3A0xc1f83f22e181aac1!2z5rC35bed56We56S-!5e0!3m2!1sja!2sjp!4v1623988298533!5m2!1sja!2sjp" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="ggmap2 fade-block"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12869.331934861217!2d136.185767!3d36.255694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8e542fc3ae44f%3A0xc1f83f22e181aac1!2z5rC35bed56We56S-!5e0!3m2!1sja!2sjp!4v1624554242573!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <h3 class="address">〒910-XXXX <br class="ib">福井県あわら市星駆 XX-XX-X</h3>
+      <h3 class="address">TEL / <a href="tel:"></a>000-000-0000</h3>
+      <ul class="description fade-block">
+        <li>
+          <h4 class="bus">シャトルバス</h4>
+          <p>30分間隔 / あわら湯のまち駅から<br class="ib2">シャトルバスが運行しています！<br>※9時30分始発/16時終便</p>
+        </li>
+        <li>
+          <h4 class="car">駐車場(無料)</h4>
+          <p>普通乗用車 500台 /大型バス10台 <br class="ib2">/ 身障者用スペース10台</p>
+        </li>
+      </ul>
+    </section>
+    -->
+
+  </main>
+  <footer>
+    <img src="img/mask2.png" class="mask2">
+    <div class="footer_inner">
+      <div class="footer_icon">
+        <h1 class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="hoshikake_aquarium"></a>
+        </h1>
+        <ul>
+          <li><a  href="https://twitter.com/hogehoge"><i class="lab la-twitter"></i><li>
+          <li><a class="instagram" href="#"><img src="img/Instagram_Glyph_Gradient_RGB.png" alt="instagram"></a></li>
+        </ul>
+      </div>
+
+      <!-- 末尾メニュ―
+      <div class="footer_nav">
+        <ul>
+          <li><a href="#pick_up">＞ 見どころ</a></li>
+          <li><a href="#facility_map">＞ 館内マップ</a></li>
+          <li><a href="#opening_hours">＞ 営業時間</a></li>
+          <li><a href="#fee">＞ 料金</a></li>
+          <li><a href="#news">＞ ニュース</a></li>
+          <li><a href="#access">＞ アクセス</a></li>
+        </ul>
+      </div>
+      -->
+
+    </div>
+    <p class="copyright">&copy; 2021_hoshikake_aquarium</p>
+  </footer>
+
+  <!-- javascriptに紐づける -->
+  <script  type="text/javascript" src="hoshikake.js"></script>
+  <noscript>
+    <style>
+      .fade-block {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+      }
+    </style>
+  </noscript>
+</body>
+
+</html>

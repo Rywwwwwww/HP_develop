@@ -1,0 +1,1512 @@
+/* HP ホーム画面サイズ調整 */
+
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}                                        /*全margin,paddingをリセット*/
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box;-o-box-sizing: border-box;  -ms-box-sizing: border-box;box-sizing: border-box;
+}                                       /*box-sizingをborder-boxに*/
+
+html {
+  font-size: 62.5%;                     /*フォントサイズを1rem=10pxに*/
+}                 
+
+body {
+  background-color: #f5f5f5;          /*背景を#f0f0f0*/
+  color:   #28527a;                       /*文字色を #28527a*/
+  font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic','YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Calibri','Arial';  
+  font-size: 1.44rem;                    /*フォントサイズをデフォルト14pに*/  
+  text-decoration: none;                /*下線等無し*/
+  letter-spacing: 0.1rem;             
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size:2.3rem;
+}
+
+a,p,dt,dd {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}                                       /*画像の隙間や変形をなくす*/
+
+li {
+  font-size: 1.4rem;
+  font-weight: bold;
+  list-style: none;                     /*リストに・等無し*/
+}
+
+a:link,a:visited,a:hover,a:active {  
+  text-decoration: none;  
+  color:  #28527a;  
+}  
+
+.logo {
+  width: 150px;
+  line-height: 1;
+}
+
+.logo a {
+  display: block;
+}
+
+.section-title {
+  display: inline-block;
+  line-height: 1.1;
+  margin: 10rem 0 6rem 0;
+  color: #28527a;
+  background-image: linear-gradient(transparent 70%, #fdec99 70%);
+}
+
+.wrapper {
+  width:100%;
+  max-width: 1200px;
+  padding: 0 4%;
+  margin:  auto;
+  text-align: center;
+}                                     /*横幅の設定*/
+
+.ib {
+  display: none;
+}
+
+.ib2 {
+  display: none;
+}
+
+main{
+  overflow: hidden;
+}
+
+/* ----------下からふわっと---------- */
+/* 画面外 */
+.fade-block {
+  opacity: 0; 
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+
+/* 画面に入った時の動き */
+.fade-block.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}   
+
+
+/*----------------#header----------------------------------------------*/
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 71.5vh;
+  overflow: hidden;
+}
+  
+@keyframes slideshow {
+  0% {opacity: 0;}
+  5% {opacity: 1;}
+  16% {opacity: 1;}
+  35% {opacity: 0;}
+  100% {opacity: 0;}
+}
+  
+.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slideshow 32s infinite;
+}
+  
+.slide img:nth-of-type(1) { animation-delay: -2s;}
+.slide img:nth-of-type(2) { animation-delay: 4s; }
+.slide img:nth-of-type(3) { animation-delay: 9s; }
+.slide img:nth-of-type(4) { animation-delay: 15s; }
+.slide img:nth-of-type(5) { animation-delay: 20s; }
+.slide img:nth-of-type(6) { animation-delay: 25s; }
+
+.pc { display: block !important; }
+.sp { display: none !important; }
+
+
+.top-text {
+  width: 100%;
+  position: absolute;
+  top: 25vh;
+}
+
+/*M.F.C 表示*/
+.top-text > h2 {
+  display: block;
+  text-align: center;
+  font-size: 11rem;
+  font-weight: bold;
+  line-height: 1.7;
+  color: #f5f5f5;
+  opacity: 95%;
+  text-shadow: 0 0 1rem #28527a ;
+  letter-spacing: 3rem;
+}
+/*むつあい　フラワー　コネクション*/
+.top-text > p {
+  display: block;
+  text-align: center;
+  font-size: 3.5rem;
+  /*
+  color: #f5f5f5;
+  opacity: 60%;
+  text-shadow: 0 0 1rem #28527a ;
+  */
+}
+
+
+
+
+
+
+@media only screen and (max-width:800px) {
+  /*tablet用のcssを記述*/
+
+  .pc { display: none !important; }
+  .sp { display: block !important; }
+
+  .slide {
+    height: 77vh;
+  }
+
+  .slide img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .trimming1 {
+    object-position: 58% center;
+  }
+  .trimming2 {
+    object-position: 30% center;
+  }
+}
+
+/*----------------#header----------------------------------------------*/
+
+.mask {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  margin-top: calc(75vh - 3%); 
+}
+
+@media only screen and (max-width:800px) {
+  /*tablet用のcssを記述*/
+  .mask {
+    position: absolute;
+    top: calc(77vh - 2%);
+    left: 0;
+    margin-top: 0;
+  }
+
+  .arrow {
+    position: relative;
+  }
+
+  .arrow::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 17px;
+    height: 17px;
+    border-top: 2px solid #28527a;
+    border-right: 2px solid #28527a;
+    transform: translateX(-50%) rotate(135deg);
+    margin-top: 3rem;
+  }
+}
+
+.top {
+  position: absolute;
+  width: 90vw;
+  top: 0;
+  left: 0;
+  margin: 5%;
+}
+
+.mem_mail{
+  display: table;
+  margin: 0 auto;
+}
+
+.inner {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.inner ul {
+  display: inline-flex;
+  align-items: center;
+}
+
+.instagram img {
+  height: auto;
+  width: 3.5rem;
+}
+
+.la-twitter {
+  font-size: 3.5rem;
+  color: #55acee;
+  margin-right: 2rem;
+}
+
+.la-water, .la-times{
+  font-size: 3.5rem;
+  color: #28527a;
+  display: none;
+}
+
+.top span {
+  font-size: 2.2rem;
+}
+
+#menu-btn-check,.menu-content {
+  display: none;
+}
+
+.nav ul {
+  min-width: 100%;
+  display: flex;
+  justify-content:space-evenly;
+  margin: 7rem 0 0 0;
+}
+
+.copy {
+  width: 60vw;
+  margin: 2rem auto;
+  display: block;
+}
+
+/*カテゴリー欄*/
+.nav li {
+  width: 22.5%;
+  text-align: center;
+}
+
+.nav i {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+  color: #28527a;
+}
+
+.nav span:hover {
+  background-image: linear-gradient(transparent 50%, #fbeeac 50%);
+}
+
+/*カテゴリー欄*/
+.nav li + li {
+  border-left: 0.2rem dotted #8ac4d0;
+  padding-left: 2%;
+}
+
+/*----------------#pick_up----------------------------------------------*/
+
+#pick_up {
+  overflow: hidden;
+}
+
+.pickup_main {
+  position: relative;
+  margin-bottom: 10rem;
+  overflow: hidden;
+}
+
+.pickup_main img {
+  margin-bottom: 8rem;
+}
+
+.star1 {
+  width: 13%;
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+}
+
+.title span {
+  font-size: 3rem;
+  -webkit-text-emphasis: dot;
+  -webkit-text-emphasis-color: #55acee;
+  text-emphasis: filled;
+  text-emphasis-color: #55acee;
+}
+
+.pickup_dolphin {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 8rem;
+}
+
+.pickup_dolphin_pic {
+  position: relative;
+  width: 45%;
+}
+
+.star2 {
+  width: 26%;
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+}
+
+.bubble1 {
+  width: 10vw;
+  opacity: 30%;
+  padding-right: calc(50vw - 50%);
+  position: absolute;
+  top: 80vw;
+  right: 0;
+  z-index: -1;
+}
+
+.bubble2 {
+  width: 15vw;
+  opacity: 30%;
+  padding-left: calc(50vw - 50%);
+  position: absolute;
+  top: 130vw;
+  left: 0;
+  z-index: -1;
+}
+
+.bubble3 {
+  width: 12vw;
+  opacity: 30%;
+  padding-left: calc(50vw - 50%);
+  position: absolute;
+  top: 150vw;
+  right: 6vw;
+  transform: rotate(35deg);
+  z-index: -1;
+}
+
+.bubble4 {
+  width: 12vw;
+  opacity: 30%;
+  padding-left: calc(50vw - 50%);
+  position: absolute;
+  top: 230vw;
+  right: 6vw;
+  transform: rotate(15deg);
+  z-index: -1;
+}
+
+.bubble5 {
+  width: 12vw;
+  opacity: 30%;
+  padding-left: calc(50vw - 50%);
+  position: absolute;
+  top: 250vw;
+  left: 0;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.glitter1 {
+  width: 14%;
+  position: absolute;
+  top: 0rem;
+  right: -3rem;
+  z-index: -1;
+}
+
+.glitter2 {
+  width: 12%;
+  position: absolute;
+  bottom: 0;
+  left: -2vw;
+  z-index: -1;
+}
+
+.title{
+  margin-bottom: 3rem;
+}
+
+.pop {
+  width: 65%;
+  min-width: 280px;
+  padding: 1.5rem 0;
+  background-color: #f4d160;
+  border-radius: 3rem;
+  margin: 2.5rem auto 0 auto;
+}
+
+.pop_title {
+  width: 70%;
+  min-width: 20rem;
+  padding: 0.5rem;
+  background-color: #28527a;
+  border-radius: 10rem;
+  color: #fff;
+  margin: 0.3rem auto 1.2rem auto;
+} 
+
+.pop span{
+  font-size: 2.3rem;
+}
+
+.pickup_jellyfish {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+}
+
+.pickup_jellyfish_pic {
+  width: 45%;
+  position: relative;
+}
+
+.star3 {
+  width: 26%;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+
+.others {
+  border: 0.3rem dotted #8ac4d0;
+  background-color: #fff;
+  border-radius: 6rem;
+  padding: 7% 5%;
+  color: #28527a;
+}
+
+.others_title{
+  margin-bottom: 3rem;
+}
+
+.others ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+.others li {
+  width: 15%;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.others img {
+  margin-bottom: 2rem;
+}
+
+/*----------------#facility_map----------------------------------------------*/
+
+#facility_map p{
+  margin-bottom: 6rem;
+}
+
+.facility_map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10rem;
+}
+
+.facility_map img {
+  width: 45%;
+  min-width: 300px;
+  height: 45%;
+  margin: 0 0.5rem;
+}
+
+.facility_map img+img {
+  margin-top: 10%;
+}
+
+/*----------------#Opening_hours----------------------------------------------*/
+
+#info {
+  background-color: rgba(138, 196, 208,0.2);
+  padding-bottom: 12rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.day_tour {
+  width : 35%;
+  min-width: 360px;
+  padding-bottom: 3rem;
+  border: 0.4rem solid #f4d160;
+  background-color: #fff;
+}
+
+.day_tour dt{
+  background-color: #f4d160;
+  padding: 1.5rem 0 1.5rem 0;
+  font-size: 2.3rem;
+}
+
+.la-sun,.la-moon {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.day_tour dd{
+  padding-top: 3rem ;
+  font-size: 1.8rem;
+}
+
+.night_tour{
+  width : 35%;
+  min-width: 360px;
+  padding-bottom: 3rem;
+  border: 0.4rem solid #28527a;
+  background-color: #fff;
+}
+
+.night_tour dt{
+  background-color: #28527a;
+  color: #fff;
+  padding: 1.5rem 0 1.5rem 0;
+  font-size: 2.3rem;
+}
+
+.night_tour dd{
+  padding-top: 3rem ;
+  font-size: 1.8rem;
+}
+
+.month,.child,.adult {
+  display: inline-block;
+  width: 11rem;
+  padding: 0.2rem 0;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.month {
+  background-color: #28527a;
+}
+
+.child {
+  background-color: #8ac4d0;
+}
+
+.adult {
+  background-color: #707070;
+}
+
+.slash {
+  font-size: 2rem;
+}
+
+.slash2 {
+  display: none;
+}
+
+.tax {
+  font-size: 1rem;
+}
+
+.yen1000 {
+  font-size: 2rem;
+  text-decoration: 1.5px line-through ;
+}
+
+.yen500 {
+  font-size: 2.6rem;
+  color: #fca122;
+}
+
+
+#free_pass {
+  background-image: linear-gradient(-45deg, #fff 25%, #8ac4d0 25%, #8ac4d0 50%, #fff 50%, #fff 75%, #8ac4d0 75%, #8ac4d0);
+  background-size: 4px 4px;
+  padding: 8rem 0; 
+}
+
+.free_pass {
+  background-color: #fff;
+  width: 50vw;
+  height: calc(50vw * 0.45);
+  max-width: 55rem;
+  max-height: 22rem;
+  min-width: 36rem;
+  position: relative;
+  padding: 3rem;
+  box-shadow: 8px 8px #8ac4d0;
+}
+
+.circle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-image: linear-gradient(-45deg, #fff 25%, #8ac4d0 25%, #8ac4d0 50%, #fff 50%, #fff 75%, #8ac4d0 75%, #00bfff);
+  background-size: 4px 4px;
+  position: absolute;
+  top: calc(50% - 3rem);
+  left: -3rem;
+}
+
+.free_pass h2 {
+  font-size: 4rem;
+  display: inline-block;
+  line-height: 1.1;
+  margin: 0.5rem 0 2rem 0;
+  color: #8ac4d0;
+  background-image: linear-gradient(transparent 70%, #fdec99 70%);
+}
+
+.free_pass span {
+  font-size: 3rem;
+}
+
+/*----------------#news----------------------------------------------*/
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.article li {
+  display: flex;
+  padding: 3rem 2rem;
+  border-top: 2px solid #28527a;
+}
+
+.article:last-child {
+  border-bottom: 2px solid #28527a;
+}
+
+.article p {
+  text-align: left;
+  margin: 0 2rem;
+}
+
+.article img {
+  width :30%;
+  object-fit: cover;
+}
+
+.description ul {
+  display: flex;
+  flex-direction: column;
+}
+
+/*----------------#access----------------------------------------------*/
+
+.ggmap1 iframe{
+  width:100%;
+  margin: 0 auto 5rem auto;
+  filter:grayscale(30%);-webkit-filter:grayscale(30%)
+}
+
+.ggmap2 {
+  display: none;
+  filter:grayscale(30%);-webkit-filter:grayscale(30%)
+}
+
+.address {
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin: 5rem 0 12rem 0;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  border-top: 2px solid #28527a;
+  border-bottom: 2px solid #28527a;
+}
+
+.description h4{
+  margin-right: 5rem;
+  color: #fff;
+}
+
+.bus,.car {
+  display: inline-block;
+  width: 20rem;
+  height: 3.5rem;
+  padding: 0.8rem 0;
+  border-radius: 3.5rem;
+  text-align: center;
+  
+}
+
+.bus {
+  background-color: #8ac4d0;
+}
+
+.car {
+  background-color: #f4d160;
+}
+
+.description li {
+  display: flex;
+  text-align: left;
+} 
+
+.description li:first-child {
+  margin-bottom: 3rem;
+} 
+
+/*----------------#footer----------------------------------------------*/
+
+footer {
+  width: 100%;
+  height: 20rem;
+  background-color: #28527a;
+  color: #fff;
+  position: relative;
+  margin-top: 4rem;
+}
+
+footer .mask2 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -6rem;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.footer_inner {
+  /*display: flex;*/
+  justify-content: space-between;
+  align-items:flex-start;
+  margin: 0 auto;
+  /*padding: 2rem 5vw 0 5vw;*/
+  /*中央揃え*/
+  text-align: center;
+}
+
+.footer_icon ul {
+  display:flex ;
+  margin-top: 2rem;
+}
+
+.footer_nav li,.footer_nav a {
+  font-size: 3rem;
+  font-weight:400;
+  line-height: 4;
+  text-align: center;
+  color: #fff;  
+}
+
+.copyright {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+
+/*=============各端末用===========*/
+
+/*タブレット用*/
+@media only screen and (max-width:800px) {
+  /*tablet用のcssを記述*/
+
+  /* M.F.C表示 */
+
+  .la-twitter,.instagram {
+    display: none;
+  }
+
+  /*ハンバーガ*/
+  .la-water, .la-times{
+    position: fixed;
+    top: 5vw;
+    left: calc(100vw - (3% + 5rem));
+    height: 5.5rem;
+    width: 5.5rem;
+    display: inline-block;
+    background-color: rgb(255, 253, 253, 0.6);
+    /*padding: 0.5rem;*/
+    /*border-radius: 0.5rem;*/
+    z-index: 90;
+  }
+
+  .la-times {
+    visibility: collapse;
+  }
+
+  #menu-btn-check:checked ~ * .la-times {
+    visibility: visible;
+  }
+
+  #menu-btn-check:checked ~ * .la-water {
+    visibility: hidden;
+  }
+
+
+  .menu-content {
+    display: inline-block;
+    width: 80vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 100%;/*rightの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #28527a;
+    transition: all 0.5s right;/*アニメーション設定*/
+  }
+  
+
+  #menu-btn-check:checked ~ .menu-content {
+    right: 0;/*メニューを画面内へ*/
+  }
+  
+
+  .menu-content ul {
+    width: 100%;
+    height: 100%;
+    padding: 120px 15px 15px 20px;
+  }
+
+  .menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+  }
+
+  .menu-content ul li a {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 4;
+    color:#ffffff;
+    text-decoration: none;
+    padding-top: -3rem;
+    position: relative;
+  }
+
+
+  .menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .copy {
+    font-size: 2.6rem;
+  }
+
+  .ib {
+    display: inline-block;
+  }
+
+  .ib2 {
+    display: none;
+  }
+
+  .star1,.star2,.star3 {
+    width: 17vw;
+  }
+
+
+  .bubble1 {
+    top: 110vw;
+  }
+
+  .bubble2 {
+    top: 160vw;
+  }
+
+  .bubble3 {
+    width: 14%;
+    top: 200vw;
+  }
+
+  .bubble4 {
+    width: 14%;
+    top: 280vw;
+  }
+
+  .bubble5 {
+    width: 14%;
+    top: 250vw;
+  }
+
+  .glitter1 {
+    width: 14%;
+  }
+  
+  .glitter2 {
+    width: 13%;
+  }
+
+  .pickup_dolphin,.pickup_jellyfish {
+    flex-wrap: wrap;
+  }
+
+  .pickup_main {
+    margin-bottom: 4rem; 
+  }
+
+  .pickup_main img {
+    margin-bottom: 4rem;
+  }
+
+  .pickup_dolphin_pic,.pickup_jellyfish_pic {
+    width: 70vw;
+    margin-bottom: 4rem;
+  }
+
+  .main_txt,.pickup_dolphin_txt,.pickup_jellyfish_txt,.facility_map_txt {
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+
+
+
+  .main_txt br,.pickup_dolphin_txt br,.pickup_jellyfish_txt br,.facility_map_txt br {
+    display: none;
+  }
+
+  .slash {
+    display: none;
+  }
+
+  .slash2 {
+    display: inline;
+    font-size: 2rem;
+  }
+
+  .day_tour dd {
+    margin-bottom: -1rem;
+  }
+
+  .free_pass {
+    height: 20%;
+  }
+
+  .free_pass h2 {
+    font-size: 3rem;
+  }
+
+  #info {
+    padding-bottom: 8rem;
+  }
+
+  .article li {
+    flex-wrap: wrap;
+  }
+
+  .article p {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+
+  .ggmap1 iframe {
+    display: none;
+  }
+  
+  .ggmap2 {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto 5rem auto;
+  }
+
+  .article img {
+    width: 100vw;
+    margin-top: 1.5rem;
+  }
+
+  .description li {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .description {
+    margin-bottom: 8rem;
+  }
+
+  .bus,.car {
+    margin-bottom: 1.5rem;
+  }
+
+  .description p {
+    text-align: center;
+    width: 80vw;
+  }
+
+  .description h4{
+  margin-right: 0;
+  color: #fff;
+  }
+
+  footer {
+    height: 50rem;
+  }
+
+  footer .mask2 {
+    top: -3rem;
+    left: 0;
+  }
+
+  .footer_inner {
+    padding-top: 1.4rem;
+    height: 5.5rem;
+  }
+  .footer_icon {
+    margin: 0 auto;
+  }
+
+  .footer_nav li,.footer_nav a{
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 4;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+
+/*スマホ用のcssを記述*/
+@media screen and (max-width:520px) {
+
+  .top-text {
+    font-size: 2.2rem;
+    top: 45vh;
+    left: calc(50vw - 117px);
+    letter-spacing: 1.2rem;
+  }
+
+  /*ハンバーガ*/
+  .la-water, .la-times{
+    position: fixed;
+    top: 5vw;
+    left: calc(100vw - (3% + 5rem));
+    height: 5.5rem;
+    width: 5.5rem;
+    display: inline-block;
+    background-color: rgb(255, 253, 253, 0.6);
+    /*padding: 0.5rem;*/
+    /*border-radius: 0.5rem;*/
+    z-index: 90;
+  }
+
+  .wrapper {
+    padding: 0 6%;
+  }
+
+  .pickup_main {
+    margin-bottom: 8rem;
+  }
+
+  a,p,dt,dd {
+    line-height: 1.8;
+    font-size: 1.4rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    margin: 8rem 0 4rem 0;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+  
+  h3 {
+    font-size:2rem;
+  }
+  
+  .title span{
+    font-size: 2.5rem;
+  }
+
+  .star1,.star2,.star3 {
+    width: 20vw;
+  }
+
+  .bubble1 {
+    top: 180vw;
+  }
+
+  .bubble2 {
+    top: 250vw;
+  }
+
+  .bubble3 {
+    width: 14%;
+    top: 320vw;
+  }
+
+  .bubble4 {
+    width: 14%;
+    top: 400vw;
+  }
+
+  .bubble5 {
+    width: 14%;
+    top: 340vw;
+  }
+
+  .others li {
+    width: 30%;
+  }
+
+  .facility_map img,.day_tour,.night_tour,.free_pass {
+    min-width: 280px;
+    width:90vw;
+  }
+
+  .ib2 {
+    display: inline-block;
+  }
+
+  .ib3 {
+    display: none;
+  }
+
+  .day_tour dt{
+    background-color: #f4d160;
+    padding: 1rem 0 1rem 0;
+    font-size: 2rem;
+  }
+
+  .night_tour dt{
+    background-color: #28527a;
+    padding: 1rem 0 1rem 0;
+    font-size: 2rem;
+  }
+
+  .la-sun,.la-moon {
+    font-size: 2.5rem;
+    margin-right: 1.2rem;
+  }
+
+  .month {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .free_pass {
+    padding: 2rem 0;
+  }
+
+  .free_pass h2 {
+    font-size: 2.5rem;
+  }
+
+  /* footer部 */
+  footer {
+    height: 15rem;
+  }
+
+  footer .mask2 {
+    top: -3rem;
+    left: 0;
+  }
+
+  .footer_inner {
+    padding-top: 1.4rem;
+    height: 5.5rem;
+  }
+  .footer_icon {
+    margin: 0 auto;
+  }
+  .footer_nav li,.footer_nav a{
+    font-size: 10.5px;
+    font-weight: 400;
+    line-height: 4;
+    text-align: center;
+    color: #fff;
+  }
+}
+/*スマホ用のcssを記述*/
+@media screen and (max-width:550px) {
+
+  .top-text {
+    font-size: 2.2rem;
+    top: 45vh;
+    left: calc(50vw - 117px);
+    letter-spacing: 1.2rem;
+  }
+
+  /*ハンバーガ*/
+  .la-water, .la-times{
+    position: fixed;
+    top: 5vw;
+    left: calc(100vw - (3% + 5rem));
+    height: 5.5rem;
+    width: 5.5rem;
+    display: inline-block;
+    background-color: rgb(255, 253, 253, 0.6);
+    /*padding: 0.5rem;*/
+    /*border-radius: 0.5rem;*/
+    z-index: 90;
+  }
+
+  .wrapper {
+    padding: 0 6%;
+  }
+
+  .pickup_main {
+    margin-bottom: 8rem;
+  }
+
+  a,p,dt,dd {
+    line-height: 1.8;
+    font-size: 1.4rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    margin: 8rem 0 4rem 0;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+  
+  h3 {
+    font-size:2rem;
+  }
+  
+  .title span{
+    font-size: 2.5rem;
+  }
+
+  .star1,.star2,.star3 {
+    width: 20vw;
+  }
+
+  .bubble1 {
+    top: 180vw;
+  }
+
+  .bubble2 {
+    top: 250vw;
+  }
+
+  .bubble3 {
+    width: 14%;
+    top: 320vw;
+  }
+
+  .bubble4 {
+    width: 14%;
+    top: 400vw;
+  }
+
+  .bubble5 {
+    width: 14%;
+    top: 340vw;
+  }
+
+  .others li {
+    width: 30%;
+  }
+
+  .facility_map img,.day_tour,.night_tour,.free_pass {
+    min-width: 280px;
+    width:90vw;
+  }
+
+  .ib2 {
+    display: inline-block;
+  }
+
+  .ib3 {
+    display: none;
+  }
+
+  .day_tour dt{
+    background-color: #f4d160;
+    padding: 1rem 0 1rem 0;
+    font-size: 2rem;
+  }
+
+  .night_tour dt{
+    background-color: #28527a;
+    padding: 1rem 0 1rem 0;
+    font-size: 2rem;
+  }
+
+  .la-sun,.la-moon {
+    font-size: 2.5rem;
+    margin-right: 1.2rem;
+  }
+
+  .month {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .free_pass {
+    padding: 2rem 0;
+  }
+
+  .free_pass h2 {
+    font-size: 2.5rem;
+  }
+
+  /* footer部 */
+  footer {
+    height: 15rem;
+  }
+
+  footer .mask2 {
+    top: -3rem;
+    left: 0;
+  }
+
+  .footer_inner {
+    padding-top: 1.4rem;
+    height: 5.5rem;
+  }
+  .footer_icon {
+    margin: 0 auto;
+  }
+  .footer_nav li,.footer_nav a{
+    font-size: 10.5px;
+    font-weight: 400;
+    line-height: 4;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+
+/*スマホ用*/
+@media screen and (max-width:320px) {
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  a,p,dt,dd {
+    line-height: 1.6;
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+    margin: 8rem 0 3rem 0;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .title span {
+    font-size: 2.2rem;
+  }
+
+  .pop {
+    min-width: 26rem;
+  }
+
+  .ib3 {
+    display: inline-block;
+  }
+
+  .facility_map img {
+    min-width: 250px;
+  }
+
+  .day_tour {
+    min-width: 250px;
+  }
+
+  .night_tour {
+    min-width: 250px;
+  }
+
+  .free_pass {
+    min-width: 250px;
+  }
+
+  .free_pass h2 {
+    font-size: 2.3rem;
+  }
+
+  .free_pass span {
+    font-size: 2.3rem;
+  }
+
+  .address {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  footer {
+    height: 15rem;
+  }
+
+  footer .mask2 {
+    top: -3rem;
+    left: 0;
+  }
+
+  .footer_inner {
+    padding-top: 1.4rem;
+    height: 5.5rem;
+  }
+  .footer_icon {
+    margin: 0 auto;
+  }
+
+  .footer_nav li,.footer_nav a{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 4;
+    text-align: center;
+    color: #fff;
+  }
+
+}
